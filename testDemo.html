@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css3实例</title>
+	<style type="text/css">
+        /* :root{
+        	background: yellow;
+        }
+        body {
+        	background: green;
+        } */
+        //有文本部分为黄色，没有文本部分为绿色
+        :empty{background-color: red;}
+        .p{
+        	width: 300px;
+        	height: 40px;
+        }
+        p::selection {
+        	background-color: red;
+        }
+        p::-moz-selection {
+        	background: red;
+        	color: green;
+        }
+        .h :hover {
+        	width: 640px;
+        	height: 440px;
+        } 
+        a:active {
+        	font-size: 40px;
+        }
+        input[type="text"]:hover{background-color: greenyellow;}
+        input[type="text"]:focus{background-color: skyblue;}
+        input[type="text"]:active{background-color: yellow;}
+        /* input[type="text"]:invalid{background-color: red;}
+        input[type="text"]:valid{background-color: white;} */
+        div {
+            text-shadow:5px 5px 10px gray;
+        }
+        div {
+            word-break:keep-all;
+            word-wrap:break-word;
+        }
+        @font-face {
+            font-family: WebFont;
+            src:url('font/Fontin_Sans_R_45b.otf') format("opentype");
+            font-weight: normal;
+        }
+        .color {
+            background: radial-gradient(red,black);
+            width: 200px;
+            height: 200px;
+        }
+        .changeColor {
+            background-color: yellow;
+            width: 200px;
+            transform:rotate(0deg);
+            transition: background-color 1s linear,width 1s linear,transform 1s linear;
+
+        }
+        .changeColor:hover {
+            background-color: green;
+            width: 10px;
+            transform:rotate(60deg);
+        }
+        .aColor {
+            background-color: red;
+        }
+        @keyframes mycolor {
+            0% {
+                background-color: red;
+                transform:rotate(0deg);
+            }
+            40% {
+                background-color: darkblue;
+                transform:rotate(30deg);
+            }
+            70%  {
+                background-color: yellow;
+                transform:rotate(190deg);
+            }
+            100% {
+                background-color: red;
+                transform:rotate(360deg);
+            }
+        }
+        .aColor:hover {
+            animation-name:mycolor;
+            animation-duration:5s;
+            animation-timing-function:linear;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                background-color: white;
+            }
+            100% {
+                opacity: 1;
+                background-color: white;
+            }
+        }
+        .fadeIn {
+            animation-name:fadeIn;
+            animation-duration:5s;
+            animation-timing-function:linear; 
+        }
+	</style>
+</head>
+<body>
+<div id="image-boarder" class="hhh">
+	·示例文字<br/>
+    ·示例文字<br/>
+    ·示例文字<br/>
+</div>
+<p class="p">hahha</p>
+<p class="p"></p>//empty识别不了没有内容的<p>标签 </p>  
+<img src="1.jpg" class="h">
+<a href="">hhh</a>
+<h1>标题1</h1>
+<p>内容1</p>
+<input type="text">
+<div class="color"></div>
+<div class="changeColor">使用transition功能</div>
+<div class="aColor">使用Animations功能</div>
+<div class="fadeIn">淡入淡出效果</div>
+</body>
+</html>
+landscape

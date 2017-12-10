@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片翻转</title>
+	<style type="text/css">
+        .b {
+        	width: 200px;
+        	height: 200px;
+            -webkit-transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+            cursor:pointer;
+        }
+       .c1 {
+        	position: absolute;
+            -webkit-transform: scale(0, 0);
+            opacity: 0;
+            filter: Alpha(opacity=0);
+        } 
+        .aa:hover .c1 , .aa_hover .c1{
+        	opacity: 1;
+            filter: Alpha(opacity=100);
+            -webkit-transform: scale(1, 1);
+            -webkit-transform-origin: top right; 
+        }
+        .aa:hover .c2, .aa_hover .c2 {
+        	-webkit-transform: scale(0, 0);
+            -webkit-transform-origin: bottom left;
+        }
+	</style>
+</head>
+<body>
+    <div class="aa">
+    	<img src="http://xiaohongyi.oss-cn-beijing.aliyuncs.com/geek/1.jpg" class="b c1">
+    	<img src="
+http://xiaohongyi.oss-cn-beijing.aliyuncs.com/geek/2.png" class="b c2">
+    </div>
+</div>
+</body>
+</html>
